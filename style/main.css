@@ -220,6 +220,33 @@ body {
   font-weight: lighter;
 }
 
+.images {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .images {
+    flex-direction: column; /* Stack images vertically on smaller screens */
+    gap: 15px; /* Reduce gap between images */
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .images {
+    gap: 10px; /* Further reduce gap on mobile */
+  }
+
+  .images img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
 #replay {
   cursor: pointer;
   z-index: 3;
